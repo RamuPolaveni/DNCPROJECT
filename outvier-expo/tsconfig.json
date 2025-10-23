@@ -1,5 +1,5 @@
 {
-  "extends": "outvier-expo/tsconfig.base",
+  "extends": "outvier/tsconfig.base",
   "compilerOptions": {
     "strict": true
   }

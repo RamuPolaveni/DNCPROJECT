@@ -3,7 +3,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { showMessage } from 'react-native-flash-message';
 
 // Base URL for your Django backend
-const BASE_URL = 'http://192.168.13.174:8000/api';
+const BASE_URL = 'http://192.168.20.30:8000/api';
  
 class ApiService {
   private api: AxiosInstance;

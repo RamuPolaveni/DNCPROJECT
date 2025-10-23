@@ -3727,3 +3727,1160 @@ LINE 1: SELECT COUNT(*) AS "__count" FROM "users"
 ERROR 2025-10-20 11:48:00,080 basehttp 21692 19524 "GET / HTTP/1.1" 500 155363
 WARNING 2025-10-20 11:48:00,571 log 21692 19524 Not Found: /favicon.ico
 WARNING 2025-10-20 11:48:00,572 basehttp 21692 19524 "GET /favicon.ico HTTP/1.1" 404 8884
+INFO 2025-10-23 11:00:52,739 autoreload 19576 21720 Watching for file changes with StatReloader
+WARNING 2025-10-23 11:01:03,323 base 19576 19404 Session data corrupted
+ERROR 2025-10-23 11:01:03,373 log 19576 19404 Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\polav\Desktop\DNCProject\backend\.venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\.venv\Lib\site-packages\psycopg\cursor.py", line 97, in execute
+    raise ex.with_traceback(None)
+psycopg.errors.UndefinedTable: relation "users" does not exist
+LINE 1: SELECT COUNT(*) AS "__count" FROM "users"
+                                          ^
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\polav\Desktop\DNCProject\backend\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\polav\Desktop\DNCProject\backend\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\polav\Desktop\DNCProject\backend\dnc\views.py", line 27, in home
+    'total_users': User.objects.count(),
+                   ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\.venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\.venv\Lib\site-packages\django\db\models\query.py", line 604, in count
+    return self.query.get_count(using=self.db)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\.venv\Lib\site-packages\django\db\models\sql\query.py", line 644, in get_count
+    return obj.get_aggregation(using, {"__count": Count("*")})["__count"]
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\.venv\Lib\site-packages\django\db\models\sql\query.py", line 626, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "C:\Users\polav\Desktop\DNCProject\backend\.venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\.venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\.venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\polav\Desktop\DNCProject\backend\.venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\polav\Desktop\DNCProject\backend\.venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\.venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\polav\Desktop\DNCProject\backend\.venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\.venv\Lib\site-packages\psycopg\cursor.py", line 97, in execute
+    raise ex.with_traceback(None)
+django.db.utils.ProgrammingError: relation "users" does not exist
+LINE 1: SELECT COUNT(*) AS "__count" FROM "users"
+                                          ^
+ERROR 2025-10-23 11:01:03,388 basehttp 19576 19404 "GET / HTTP/1.1" 500 156923
+WARNING 2025-10-23 11:01:03,773 log 19576 19404 Not Found: /favicon.ico
+WARNING 2025-10-23 11:01:03,774 basehttp 19576 19404 "GET /favicon.ico HTTP/1.1" 404 8884
+INFO 2025-10-23 11:10:05,070 autoreload 4184 15692 Watching for file changes with StatReloader
+INFO 2025-10-23 11:13:39,205 autoreload 22040 13888 Watching for file changes with StatReloader
+INFO 2025-10-23 11:14:33,493 autoreload 21552 5476 Watching for file changes with StatReloader
+INFO 2025-10-23 11:15:36,173 autoreload 20096 12696 Watching for file changes with StatReloader
+INFO 2025-10-23 11:18:34,955 autoreload 18684 16676 Watching for file changes with StatReloader
+INFO 2025-10-23 11:19:00,127 autoreload 4976 11508 Watching for file changes with StatReloader
+INFO 2025-10-23 11:19:19,928 autoreload 4596 12616 Watching for file changes with StatReloader
+INFO 2025-10-23 11:19:45,267 autoreload 19560 19624 Watching for file changes with StatReloader
+INFO 2025-10-23 11:20:09,476 autoreload 14944 19472 Watching for file changes with StatReloader
+INFO 2025-10-23 11:22:36,364 autoreload 4976 11508 C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\environ\fileaware_mapping.py changed, reloading.
+INFO 2025-10-23 11:22:36,365 autoreload 18684 16676 C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\environ\compat.py changed, reloading.
+INFO 2025-10-23 11:22:36,986 autoreload 14944 19472 C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\environ\fileaware_mapping.py changed, reloading.
+INFO 2025-10-23 11:22:36,987 autoreload 19560 19624 C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\colorama\winterm.py changed, reloading.
+INFO 2025-10-23 11:22:37,017 autoreload 4596 12616 C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\environ\__init__.py changed, reloading.
+INFO 2025-10-23 11:22:56,189 autoreload 4508 12416 Watching for file changes with StatReloader
+INFO 2025-10-23 11:25:23,118 autoreload 21644 8172 Watching for file changes with StatReloader
+INFO 2025-10-23 11:27:45,331 autoreload 21052 16372 Watching for file changes with StatReloader
+WARNING 2025-10-23 11:28:08,511 base 21052 15260 Session data corrupted
+ERROR 2025-10-23 11:28:08,600 log 21052 15260 Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\polav\Desktop\DNCProject\backend\.venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\.venv\Lib\site-packages\psycopg\cursor.py", line 97, in execute
+    raise ex.with_traceback(None)
+psycopg.errors.UndefinedTable: relation "users" does not exist
+LINE 1: SELECT COUNT(*) AS "__count" FROM "users"
+                                          ^
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\polav\Desktop\DNCProject\backend\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\polav\Desktop\DNCProject\backend\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\polav\Desktop\DNCProject\backend\dnc\views.py", line 27, in home
+    'total_users': User.objects.count(),
+                   ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\.venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\.venv\Lib\site-packages\django\db\models\query.py", line 604, in count
+    return self.query.get_count(using=self.db)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\.venv\Lib\site-packages\django\db\models\sql\query.py", line 644, in get_count
+    return obj.get_aggregation(using, {"__count": Count("*")})["__count"]
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\.venv\Lib\site-packages\django\db\models\sql\query.py", line 626, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "C:\Users\polav\Desktop\DNCProject\backend\.venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\.venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\.venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\polav\Desktop\DNCProject\backend\.venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\polav\Desktop\DNCProject\backend\.venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\.venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\polav\Desktop\DNCProject\backend\.venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\.venv\Lib\site-packages\psycopg\cursor.py", line 97, in execute
+    raise ex.with_traceback(None)
+django.db.utils.ProgrammingError: relation "users" does not exist
+LINE 1: SELECT COUNT(*) AS "__count" FROM "users"
+                                          ^
+ERROR 2025-10-23 11:28:08,632 basehttp 21052 15260 "GET / HTTP/1.1" 500 156923
+ERROR 2025-10-23 11:28:22,973 log 21052 16808 Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\polav\Desktop\DNCProject\backend\.venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\.venv\Lib\site-packages\psycopg\cursor.py", line 97, in execute
+    raise ex.with_traceback(None)
+psycopg.errors.UndefinedTable: relation "users" does not exist
+LINE 1: SELECT COUNT(*) AS "__count" FROM "users"
+                                          ^
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\polav\Desktop\DNCProject\backend\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\polav\Desktop\DNCProject\backend\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\polav\Desktop\DNCProject\backend\dnc\views.py", line 27, in home
+    'total_users': User.objects.count(),
+                   ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\.venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\.venv\Lib\site-packages\django\db\models\query.py", line 604, in count
+    return self.query.get_count(using=self.db)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\.venv\Lib\site-packages\django\db\models\sql\query.py", line 644, in get_count
+    return obj.get_aggregation(using, {"__count": Count("*")})["__count"]
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\.venv\Lib\site-packages\django\db\models\sql\query.py", line 626, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "C:\Users\polav\Desktop\DNCProject\backend\.venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\.venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\.venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\polav\Desktop\DNCProject\backend\.venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\polav\Desktop\DNCProject\backend\.venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\.venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\polav\Desktop\DNCProject\backend\.venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\.venv\Lib\site-packages\psycopg\cursor.py", line 97, in execute
+    raise ex.with_traceback(None)
+django.db.utils.ProgrammingError: relation "users" does not exist
+LINE 1: SELECT COUNT(*) AS "__count" FROM "users"
+                                          ^
+ERROR 2025-10-23 11:28:22,978 basehttp 21052 16808 "GET / HTTP/1.1" 500 154333
+INFO 2025-10-23 11:28:22,986 basehttp 21052 16808 - Broken pipe from ('127.0.0.1', 53779)
+WARNING 2025-10-23 11:50:52,461 base 14720 1184 Session data corrupted
+ERROR 2025-10-23 11:50:52,542 log 14720 1184 Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\polav\Desktop\DNCProject\backend\.venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\.venv\Lib\site-packages\psycopg\cursor.py", line 97, in execute
+    raise ex.with_traceback(None)
+psycopg.errors.UndefinedTable: relation "users" does not exist
+LINE 1: SELECT COUNT(*) AS "__count" FROM "users"
+                                          ^
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\polav\Desktop\DNCProject\backend\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\polav\Desktop\DNCProject\backend\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\polav\Desktop\DNCProject\backend\dnc\views.py", line 27, in home
+    'total_users': User.objects.count(),
+                   ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\.venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\.venv\Lib\site-packages\django\db\models\query.py", line 604, in count
+    return self.query.get_count(using=self.db)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\.venv\Lib\site-packages\django\db\models\sql\query.py", line 644, in get_count
+    return obj.get_aggregation(using, {"__count": Count("*")})["__count"]
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\.venv\Lib\site-packages\django\db\models\sql\query.py", line 626, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "C:\Users\polav\Desktop\DNCProject\backend\.venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\.venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\.venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\polav\Desktop\DNCProject\backend\.venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\polav\Desktop\DNCProject\backend\.venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\.venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\polav\Desktop\DNCProject\backend\.venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\.venv\Lib\site-packages\psycopg\cursor.py", line 97, in execute
+    raise ex.with_traceback(None)
+django.db.utils.ProgrammingError: relation "users" does not exist
+LINE 1: SELECT COUNT(*) AS "__count" FROM "users"
+                                          ^
+ERROR 2025-10-23 11:50:52,568 basehttp 14720 1184 "GET / HTTP/1.1" 500 157368
+INFO 2025-10-23 13:28:44,510 autoreload 21580 21468 Watching for file changes with StatReloader
+INFO 2025-10-23 13:45:06,606 autoreload 21004 22128 Watching for file changes with StatReloader
+INFO 2025-10-23 14:46:11,153 autoreload 12752 16004 Watching for file changes with StatReloader
+INFO 2025-10-23 14:46:59,411 autoreload 21812 10728 Watching for file changes with StatReloader
+INFO 2025-10-23 14:53:49,900 autoreload 20696 4852 Watching for file changes with StatReloader
+INFO 2025-10-23 14:56:14,849 basehttp 20696 4712 "POST /api/auth/register/ HTTP/1.1" 201 495
+ERROR 2025-10-23 14:56:15,490 log 20696 4712 Internal Server Error: /api/outvier/dashboard/my_dashboard/
+Traceback (most recent call last):
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+psycopg2.errors.UndefinedTable: relation "outvier_goal" does not exist
+LINE 1: ...l"."created_at", "outvier_goal"."updated_at" FROM "outvier_g...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\polav\Desktop\DNCProject\backend\apps\outvier\views.py", line 411, in my_dashboard
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\serializers.py", line 555, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\fields.py", line 1838, in to_representation
+    return method(value)
+  File "C:\Users\polav\Desktop\DNCProject\backend\apps\outvier\serializers.py", line 245, in get_active_goals
+    return GoalSerializer(active_goals, many=True).data
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\serializers.py", line 687, in to_representation
+    self.child.to_representation(item) for item in iterable
+                                                   ^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\models\query.py", line 398, in __iter__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+django.db.utils.ProgrammingError: relation "outvier_goal" does not exist
+LINE 1: ...l"."created_at", "outvier_goal"."updated_at" FROM "outvier_g...
+                                                             ^
+
+ERROR 2025-10-23 14:56:15,499 basehttp 20696 4712 "GET /api/outvier/dashboard/my_dashboard/ HTTP/1.1" 500 231477
+ERROR 2025-10-23 14:56:16,823 log 20696 4712 Internal Server Error: /api/outvier/dashboard/my_dashboard/
+Traceback (most recent call last):
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+psycopg2.errors.UndefinedTable: relation "outvier_goal" does not exist
+LINE 1: ...l"."created_at", "outvier_goal"."updated_at" FROM "outvier_g...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\polav\Desktop\DNCProject\backend\apps\outvier\views.py", line 411, in my_dashboard
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\serializers.py", line 555, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\fields.py", line 1838, in to_representation
+    return method(value)
+  File "C:\Users\polav\Desktop\DNCProject\backend\apps\outvier\serializers.py", line 245, in get_active_goals
+    return GoalSerializer(active_goals, many=True).data
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\serializers.py", line 687, in to_representation
+    self.child.to_representation(item) for item in iterable
+                                                   ^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\models\query.py", line 398, in __iter__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+django.db.utils.ProgrammingError: relation "outvier_goal" does not exist
+LINE 1: ...l"."created_at", "outvier_goal"."updated_at" FROM "outvier_g...
+                                                             ^
+
+ERROR 2025-10-23 14:56:16,828 basehttp 20696 4712 "GET /api/outvier/dashboard/my_dashboard/ HTTP/1.1" 500 231477
+ERROR 2025-10-23 14:56:19,087 log 20696 4712 Internal Server Error: /api/outvier/dashboard/my_dashboard/
+Traceback (most recent call last):
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+psycopg2.errors.UndefinedTable: relation "outvier_goal" does not exist
+LINE 1: ...l"."created_at", "outvier_goal"."updated_at" FROM "outvier_g...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\polav\Desktop\DNCProject\backend\apps\outvier\views.py", line 411, in my_dashboard
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\serializers.py", line 555, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\fields.py", line 1838, in to_representation
+    return method(value)
+  File "C:\Users\polav\Desktop\DNCProject\backend\apps\outvier\serializers.py", line 245, in get_active_goals
+    return GoalSerializer(active_goals, many=True).data
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\serializers.py", line 687, in to_representation
+    self.child.to_representation(item) for item in iterable
+                                                   ^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\models\query.py", line 398, in __iter__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+django.db.utils.ProgrammingError: relation "outvier_goal" does not exist
+LINE 1: ...l"."created_at", "outvier_goal"."updated_at" FROM "outvier_g...
+                                                             ^
+
+ERROR 2025-10-23 14:56:19,091 basehttp 20696 4712 "GET /api/outvier/dashboard/my_dashboard/ HTTP/1.1" 500 231477
+ERROR 2025-10-23 14:56:21,008 log 20696 4712 Internal Server Error: /api/outvier/dashboard/my_dashboard/
+Traceback (most recent call last):
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+psycopg2.errors.UndefinedTable: relation "outvier_goal" does not exist
+LINE 1: ...l"."created_at", "outvier_goal"."updated_at" FROM "outvier_g...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\polav\Desktop\DNCProject\backend\apps\outvier\views.py", line 411, in my_dashboard
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\serializers.py", line 555, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\fields.py", line 1838, in to_representation
+    return method(value)
+  File "C:\Users\polav\Desktop\DNCProject\backend\apps\outvier\serializers.py", line 245, in get_active_goals
+    return GoalSerializer(active_goals, many=True).data
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\serializers.py", line 687, in to_representation
+    self.child.to_representation(item) for item in iterable
+                                                   ^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\models\query.py", line 398, in __iter__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+django.db.utils.ProgrammingError: relation "outvier_goal" does not exist
+LINE 1: ...l"."created_at", "outvier_goal"."updated_at" FROM "outvier_g...
+                                                             ^
+
+ERROR 2025-10-23 14:56:21,012 basehttp 20696 4712 "GET /api/outvier/dashboard/my_dashboard/ HTTP/1.1" 500 231477
+ERROR 2025-10-23 14:56:22,502 log 20696 4712 Internal Server Error: /api/outvier/dashboard/my_dashboard/
+Traceback (most recent call last):
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+psycopg2.errors.UndefinedTable: relation "outvier_goal" does not exist
+LINE 1: ...l"."created_at", "outvier_goal"."updated_at" FROM "outvier_g...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\polav\Desktop\DNCProject\backend\apps\outvier\views.py", line 411, in my_dashboard
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\serializers.py", line 555, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\fields.py", line 1838, in to_representation
+    return method(value)
+  File "C:\Users\polav\Desktop\DNCProject\backend\apps\outvier\serializers.py", line 245, in get_active_goals
+    return GoalSerializer(active_goals, many=True).data
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\serializers.py", line 687, in to_representation
+    self.child.to_representation(item) for item in iterable
+                                                   ^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\models\query.py", line 398, in __iter__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+django.db.utils.ProgrammingError: relation "outvier_goal" does not exist
+LINE 1: ...l"."created_at", "outvier_goal"."updated_at" FROM "outvier_g...
+                                                             ^
+
+ERROR 2025-10-23 14:56:22,506 basehttp 20696 4712 "GET /api/outvier/dashboard/my_dashboard/ HTTP/1.1" 500 231477
+ERROR 2025-10-23 14:56:24,756 log 20696 4712 Internal Server Error: /api/outvier/dashboard/my_dashboard/
+Traceback (most recent call last):
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+psycopg2.errors.UndefinedTable: relation "outvier_goal" does not exist
+LINE 1: ...l"."created_at", "outvier_goal"."updated_at" FROM "outvier_g...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\polav\Desktop\DNCProject\backend\apps\outvier\views.py", line 411, in my_dashboard
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\serializers.py", line 555, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\fields.py", line 1838, in to_representation
+    return method(value)
+  File "C:\Users\polav\Desktop\DNCProject\backend\apps\outvier\serializers.py", line 245, in get_active_goals
+    return GoalSerializer(active_goals, many=True).data
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\serializers.py", line 687, in to_representation
+    self.child.to_representation(item) for item in iterable
+                                                   ^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\models\query.py", line 398, in __iter__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+django.db.utils.ProgrammingError: relation "outvier_goal" does not exist
+LINE 1: ...l"."created_at", "outvier_goal"."updated_at" FROM "outvier_g...
+                                                             ^
+
+ERROR 2025-10-23 14:56:24,761 basehttp 20696 4712 "GET /api/outvier/dashboard/my_dashboard/ HTTP/1.1" 500 231477
+ERROR 2025-10-23 14:56:54,995 log 20696 4712 Internal Server Error: /api/outvier/dashboard/my_dashboard/
+Traceback (most recent call last):
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+psycopg2.errors.UndefinedTable: relation "outvier_goal" does not exist
+LINE 1: ...l"."created_at", "outvier_goal"."updated_at" FROM "outvier_g...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\polav\Desktop\DNCProject\backend\apps\outvier\views.py", line 411, in my_dashboard
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\serializers.py", line 555, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\fields.py", line 1838, in to_representation
+    return method(value)
+  File "C:\Users\polav\Desktop\DNCProject\backend\apps\outvier\serializers.py", line 245, in get_active_goals
+    return GoalSerializer(active_goals, many=True).data
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\serializers.py", line 687, in to_representation
+    self.child.to_representation(item) for item in iterable
+                                                   ^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\models\query.py", line 398, in __iter__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+django.db.utils.ProgrammingError: relation "outvier_goal" does not exist
+LINE 1: ...l"."created_at", "outvier_goal"."updated_at" FROM "outvier_g...
+                                                             ^
+
+ERROR 2025-10-23 14:56:54,999 basehttp 20696 4712 "GET /api/outvier/dashboard/my_dashboard/ HTTP/1.1" 500 231477
+ERROR 2025-10-23 14:56:56,409 log 20696 4712 Internal Server Error: /api/outvier/dashboard/my_dashboard/
+Traceback (most recent call last):
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+psycopg2.errors.UndefinedTable: relation "outvier_goal" does not exist
+LINE 1: ...l"."created_at", "outvier_goal"."updated_at" FROM "outvier_g...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\polav\Desktop\DNCProject\backend\apps\outvier\views.py", line 411, in my_dashboard
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\serializers.py", line 555, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\fields.py", line 1838, in to_representation
+    return method(value)
+  File "C:\Users\polav\Desktop\DNCProject\backend\apps\outvier\serializers.py", line 245, in get_active_goals
+    return GoalSerializer(active_goals, many=True).data
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\serializers.py", line 687, in to_representation
+    self.child.to_representation(item) for item in iterable
+                                                   ^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\models\query.py", line 398, in __iter__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+django.db.utils.ProgrammingError: relation "outvier_goal" does not exist
+LINE 1: ...l"."created_at", "outvier_goal"."updated_at" FROM "outvier_g...
+                                                             ^
+
+ERROR 2025-10-23 14:56:56,413 basehttp 20696 4712 "GET /api/outvier/dashboard/my_dashboard/ HTTP/1.1" 500 231477
+ERROR 2025-10-23 14:56:58,695 log 20696 4712 Internal Server Error: /api/outvier/dashboard/my_dashboard/
+Traceback (most recent call last):
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+psycopg2.errors.UndefinedTable: relation "outvier_goal" does not exist
+LINE 1: ...l"."created_at", "outvier_goal"."updated_at" FROM "outvier_g...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\polav\Desktop\DNCProject\backend\apps\outvier\views.py", line 411, in my_dashboard
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\serializers.py", line 555, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\fields.py", line 1838, in to_representation
+    return method(value)
+  File "C:\Users\polav\Desktop\DNCProject\backend\apps\outvier\serializers.py", line 245, in get_active_goals
+    return GoalSerializer(active_goals, many=True).data
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+                 ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\rest_framework\serializers.py", line 687, in to_representation
+    self.child.to_representation(item) for item in iterable
+                                                   ^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\models\query.py", line 398, in __iter__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\polav\Desktop\DNCProject\backend\venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+django.db.utils.ProgrammingError: relation "outvier_goal" does not exist
+LINE 1: ...l"."created_at", "outvier_goal"."updated_at" FROM "outvier_g...
+                                                             ^
+
+ERROR 2025-10-23 14:56:58,699 basehttp 20696 4712 "GET /api/outvier/dashboard/my_dashboard/ HTTP/1.1" 500 231477
+INFO 2025-10-23 15:09:03,292 autoreload 4836 22196 Watching for file changes with StatReloader
+INFO 2025-10-23 15:55:20,937 autoreload 11104 9836 Watching for file changes with StatReloader
+WARNING 2025-10-23 16:00:22,813 log 11104 19804 Unauthorized: /api/auth/login/
+WARNING 2025-10-23 16:00:22,814 basehttp 11104 19804 "POST /api/auth/login/ HTTP/1.1" 401 31
+INFO 2025-10-23 16:00:54,499 basehttp 11104 19804 "POST /api/auth/register/ HTTP/1.1" 201 497
+INFO 2025-10-23 16:00:55,021 basehttp 11104 19804 "GET /api/outvier/dashboard/my_dashboard/ HTTP/1.1" 200 333
+INFO 2025-10-23 16:01:25,219 basehttp 11104 19804 "GET /api/outvier/dashboard/my_dashboard/ HTTP/1.1" 200 333
+INFO 2025-10-23 16:01:55,429 basehttp 11104 19804 "GET /api/outvier/dashboard/my_dashboard/ HTTP/1.1" 200 333
+INFO 2025-10-23 16:02:14,132 basehttp 11104 19804 "GET /api/outvier/goals/ HTTP/1.1" 200 52
+INFO 2025-10-23 16:02:17,954 basehttp 11104 19804 "GET /api/outvier/matches/ HTTP/1.1" 200 52
+INFO 2025-10-23 16:02:25,011 basehttp 11104 19804 "GET /api/outvier/pathways/ HTTP/1.1" 200 52
+INFO 2025-10-23 16:02:25,593 basehttp 11104 19804 "GET /api/outvier/dashboard/my_dashboard/ HTTP/1.1" 200 333
+WARNING 2025-10-23 16:02:30,315 log 11104 19804 Not Found: /api/auth/logout/
+WARNING 2025-10-23 16:02:30,316 basehttp 11104 19804 "POST /api/auth/logout/ HTTP/1.1" 404 15343
+INFO 2025-10-23 16:03:16,050 basehttp 11104 19804 "POST /api/auth/register/ HTTP/1.1" 201 479
+WARNING 2025-10-23 16:03:29,008 log 11104 19804 Not Found: /api/auth/logout/
+WARNING 2025-10-23 16:03:29,009 basehttp 11104 19804 "POST /api/auth/logout/ HTTP/1.1" 404 15343
+INFO 2025-10-23 16:03:59,984 basehttp 11104 19804 "POST /api/auth/register/ HTTP/1.1" 201 489
+INFO 2025-10-23 16:04:30,410 basehttp 11104 19804 "GET /api/outvier/dashboard/my_dashboard/ HTTP/1.1" 200 328
+INFO 2025-10-23 16:04:38,180 basehttp 11104 19804 "POST /api/outvier/goals/ HTTP/1.1" 201 666
+INFO 2025-10-23 16:04:41,067 basehttp 11104 19804 "GET /api/outvier/goals/ HTTP/1.1" 200 718
+INFO 2025-10-23 16:04:46,177 basehttp 11104 19804 "GET /api/outvier/goals/4/ HTTP/1.1" 200 666
+INFO 2025-10-23 16:05:00,667 basehttp 11104 19804 "GET /api/outvier/dashboard/my_dashboard/ HTTP/1.1" 200 996
+INFO 2025-10-23 16:05:30,939 basehttp 11104 19804 "GET /api/outvier/dashboard/my_dashboard/ HTTP/1.1" 200 996
+INFO 2025-10-23 16:06:11,282 autoreload 24048 4824 Watching for file changes with StatReloader
+WARNING 2025-10-23 16:06:56,552 log 24048 2636 Not Found: /api/auth/me/
+WARNING 2025-10-23 16:06:56,552 basehttp 24048 2636 "GET /api/auth/me/ HTTP/1.1" 404 15330
+INFO 2025-10-23 16:15:42,155 autoreload 21008 23764 Watching for file changes with StatReloader
